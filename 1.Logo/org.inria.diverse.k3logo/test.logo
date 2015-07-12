@@ -1,0 +1,11 @@
+CLEAR
+MAKE color = 10
+TO carre  :n
+	REPEAT 4
+	LEFT 90
+	PENDOWN
+	FORWARD n
+	END REPEAT
+END TO
+
+carre 50

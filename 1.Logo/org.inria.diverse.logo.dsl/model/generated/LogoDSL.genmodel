@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.inria.diverse.logo.dsl/src-gen" editDirectory="/org.inria.diverse.logo.dsl.edit/src"
+    editorDirectory="/org.inria.diverse.logo.dsl.editor/src" modelPluginID="org.inria.diverse.logo.dsl"
+    forceOverwrite="true" modelName="LogoDSL" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="6.0" copyrightFields="false" editPluginID="org.inria.diverse.logo.dsl.edit"
+    editorPluginID="org.inria.diverse.logo.dsl.editor" runtimeVersion="2.10">
+  <genPackages prefix="LogoDSL" basePackage="org.inria.diverse.logo.dsl" disposableProviderFactory="true"
+      fileExtensions="logo" ecorePackage="LogoDSL.ecore#/">
+    <genClasses ecoreClass="LogoDSL.ecore#//LogoProgram">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//LogoProgram/sentences"/>
+    </genClasses>
+    <genClasses ecoreClass="LogoDSL.ecore#//SENTENCE"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//MOVE">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//MOVE/amount"/>
+    </genClasses>
+    <genClasses ecoreClass="LogoDSL.ecore#//FORWARD"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//LEFT"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//RIGHT"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//SET_X"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//SET_Y"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//DRAWING_SENTENCE"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//PENDOWN"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//PENUP"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//COLOREABLE">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LogoDSL.ecore#//COLOREABLE/color"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//COLOREABLE/colorSpec"/>
+    </genClasses>
+    <genClasses ecoreClass="LogoDSL.ecore#//PENCOLOR"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//CANVAS_COLOR"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//COLOR_SPEC">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//COLOR_SPEC/red"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//COLOR_SPEC/green"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//COLOR_SPEC/blue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//COLOR_SPEC/alpha"/>
+    </genClasses>
+    <genClasses ecoreClass="LogoDSL.ecore#//FONT_SPEC"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//FONT_STYLE">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//FONT_STYLE/style"/>
+    </genClasses>
+    <genClasses ecoreClass="LogoDSL.ecore#//FontStyleValues"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//CLEAR"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//HOME"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//DRAW_STRING">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LogoDSL.ecore#//DRAW_STRING/text"/>
+    </genClasses>
+    <genClasses ecoreClass="LogoDSL.ecore#//REFERENCIABLE">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LogoDSL.ecore#//REFERENCIABLE/name"/>
+    </genClasses>
+    <genClasses ecoreClass="LogoDSL.ecore#//MAKE">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//MAKE/value"/>
+    </genClasses>
+    <genClasses ecoreClass="LogoDSL.ecore#//VARIABLE_REF">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//VARIABLE_REF/toVar"/>
+    </genClasses>
+    <genClasses ecoreClass="LogoDSL.ecore#//EXPRESSION"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//VALUE">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LogoDSL.ecore#//VALUE/val"/>
+    </genClasses>
+    <genClasses ecoreClass="LogoDSL.ecore#//CONTENT">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//CONTENT/var"/>
+    </genClasses>
+    <genClasses ecoreClass="LogoDSL.ecore#//OPERATION">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//OPERATION/targetVariable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//OPERATION/valOne"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//OPERATION/valTwo"/>
+    </genClasses>
+    <genClasses ecoreClass="LogoDSL.ecore#//SUM"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//SUBTRACT"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//MULTIPLY"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//DIVIDE"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//CONTROL_SENTENCES">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//CONTROL_SENTENCES/commands"/>
+    </genClasses>
+    <genClasses ecoreClass="LogoDSL.ecore#//REPEAT">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//REPEAT/times"/>
+    </genClasses>
+    <genClasses ecoreClass="LogoDSL.ecore#//TO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LogoDSL.ecore#//TO/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//TO/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="LogoDSL.ecore#//PARAM"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//PROCEDURE_CALL">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//PROCEDURE_CALL/to"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//PROCEDURE_CALL/params"/>
+    </genClasses>
+    <genClasses ecoreClass="LogoDSL.ecore#//IF_SENTENCE">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//IF_SENTENCE/condition"/>
+    </genClasses>
+    <genClasses ecoreClass="LogoDSL.ecore#//BOOLEAN_EXPRESSION">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//BOOLEAN_EXPRESSION/op1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LogoDSL.ecore#//BOOLEAN_EXPRESSION/op2"/>
+    </genClasses>
+    <genClasses ecoreClass="LogoDSL.ecore#//EQUALS"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//GREATER_THAN"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//LESSER_THAN"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//BOLD"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//ITALIC"/>
+    <genClasses ecoreClass="LogoDSL.ecore#//PLAIN"/>
+  </genPackages>
+</genmodel:GenModel>
