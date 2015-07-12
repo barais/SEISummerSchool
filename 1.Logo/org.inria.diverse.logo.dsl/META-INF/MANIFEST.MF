@@ -26,7 +26,6 @@ Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.inria.diverse.logo.dsl,
  org.inria.diverse.logo.dsl.formatting,
  org.inria.diverse.logo.dsl.generator,
- org.inria.diverse.logo.dsl.interpreter,
  org.inria.diverse.logo.dsl.scoping,
  org.inria.diverse.logo.dsl.validation,
  org.inria.diverse.logo.dsl.services,
