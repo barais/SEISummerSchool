@@ -1,67 +1,65 @@
 SEI Sumer School on Model Driven Engineering Training and Tutorials
-================================
+===================================================================
 
 ![HEADS](http://heads-project.eu/sites/default/files/heads_large.png)
 
 This repository contains a set of tutorials to get started with the technologies developed in the [HEADS research project](http://heads-project.eu/).
 
-
-## Installation of the HEADS IDE
+Installation of the HEADS IDE
+-----------------------------
 
 The recommended way to run the tutorials is to install the HEADS IDE.
 
-- [Download HEADS IDE](http://coreff5.istic.univ-rennes1.fr/jenkins/job/headside/ws/products.minimal/target/products/) that correspond to your environment (OS + 32/64 bits)
-- Unzip the archive
-- Run the eclipse(.exe) binary
+-	[Download HEADS IDE](http://coreff5.istic.univ-rennes1.fr/jenkins/job/headside/ws/products.minimal/target/products/) that correspond to your environment (OS + 32/64 bits)
+-	Unzip the archive
+-	Run the eclipse(.exe) binary
 
 More information about Eclipse can be found [here](http://help.eclipse.org/luna/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2FgettingStarted%2Fqs-02a.htm&cp=0_1_0_0)
 
-## List of tutorials
+List of tutorials
+-----------------
 
 For the scool, we propose a list of 4 tutorials. We will update there descriptions when they are available. These tutorials typically assume that you follow them sequentially but ThingML and Kevoree tutorials might be followed independently.
 
-### 1. Build your own DSL using MDE - the lego sample ###
+### 1. Build your own DSL using MDE - the lego sample
 
-Traditional Programming Language Engineering starts with the grammar of a language to produce a variety of tools for processing programs expressed in this language. Recently however, many new languages tend to be first defined through metamodels, i.e. models describing their abstract syntax. Relying on well tooled standards such as E-MOF, this approach makes it possible to readily benefit from a set
-of tools such as reflexive editors, or XML serialization of models. This tutorial aims at showing how Model Driven Engineering can easily complement these off-the-shelf tools to obtain a complete environment for such a language, including interpreter, compiler, pretty-printer and editor. We illustrate the conceptual simplicity and elegance of this approach using the running example of the well known LOGO
-programming language, developed within the Kermeta environment.
-
+Traditional Programming Language Engineering starts with the grammar of a language to produce a variety of tools for processing programs expressed in this language. Recently however, many new languages tend to be first defined through metamodels, i.e. models describing their abstract syntax. Relying on well tooled standards such as E-MOF, this approach makes it possible to readily benefit from a set of tools such as reflexive editors, or XML serialization of models. This tutorial aims at showing how Model Driven Engineering can easily complement these off-the-shelf tools to obtain a complete environment for such a language, including interpreter, compiler, pretty-printer and editor. We illustrate the conceptual simplicity and elegance of this approach using the running example of the well known LOGO programming language, developed within the Kermeta environment.
 
 [Go to the tutorial](https://github.com/barais/SEISummerSchool/tree/master/1.Logo)
 
 ### 2. HEADS Kevoree runtime management basics
 
-Learn the basics of Kevoree.
-How to write you first component.
+Learn the basics of Kevoree. How to write you first component.
 
 [Go to the tutorial](https://github.com/barais/SEISummerSchool/tree/master/2.Kevoree_Basics)
-
 
 ### 3. HEADS ThingML modelling language basics
 
 Learn the basics of ThingML. How to write you first program in a platform independent way and compile it to different platforms ranging from an Arduino microcontroller to a plain Java program. Also learn how to write platform specific components and link to exiting APIs or libraries.
 
-**[Go to this tutorial](https://github.com/barais/SEISummerSchool/tree/master/3.ThingML_Basics) **
+\*\*[Go to this tutorial](https://github.com/barais/SEISummerSchool/tree/master/3.ThingML_Basics) \*\*
 
+### 4. HEADS From design time to runtime (ThingML + Kevoree)
 
-### 3. HEADS From design time to runtime (ThingML + Kevoree)
+\*\*[Go to this tutorial](https://github.com/barais/SEISummerSchool/tree/master/4.Wrapping_ThingML_into_Kevoree) \*\*
 
-**[Go to this tutorial](https://github.com/barais/SEISummerSchool/tree/master/4.Wrapping_ThingML_into_Kevoree) **
-
-## Quick Links
+Quick Links
+-----------
 
 Installing the HEADS IDE:
 
 https://heads-project.github.io/methodology/heads_ide/installation_guide.html
 
-## Reporting issues, getting support, etc
+Reporting issues, getting support, etc
+--------------------------------------
 
-If you encounter any problem, find a bug or have suggestions for additional features, please use the HEADS IDE bug tracker at  https://github.com/HEADS-project/heads_ide/issues. This is the best and prefered way of getting in touch with us.
+If you encounter any problem, find a bug or have suggestions for additional features, please use the HEADS IDE bug tracker at https://github.com/HEADS-project/heads_ide/issues. This is the best and prefered way of getting in touch with us.
 
-## Contact us
+Contact us
+----------
 
 For any other issue feel free to contact any of us by email.
 
-* HEADS project: Franck FLEUREY (franck.fleurey@sintef.no)
-* ThingML tools: Brice MORIN (brice.morin@sintef.no)
-* Kevoree tools: Olivier BARAIS (barais@irisa.fr)
+-	HEADS project: Franck FLEUREY (franck.fleurey@sintef.no)
+-	ThingML tools: Brice MORIN (brice.morin@sintef.no)
+-	Kevoree tools: Olivier BARAIS (barais@irisa.fr)
