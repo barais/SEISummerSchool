@@ -1,0 +1,20 @@
+add jsNode : JavascriptNode
+add javaNode : JavaNode
+add jsNode.comp114 : ConsolePrinter
+add javaNode.comp787 : Ticker
+add group : WSGroup
+add chan788 : RemoteWSChan
+
+attach jsNode, javaNode group
+
+bind jsNode.comp114.input chan788
+bind javaNode.comp787.tick chan788
+
+set javaNode.comp787.random = 'true'
+set group.master = 'jsNode'
+set chan788.uuid = 'kokoko'
+set chan788.host = 'localhost'
+set chan788.port = '9051'
+
+network jsNode.ip.lo 127.0.0.1
+network javaNode.ip.lo 127.0.0.1

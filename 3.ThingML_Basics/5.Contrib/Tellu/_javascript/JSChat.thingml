@@ -1,0 +1,31 @@
+import "../PIMChat.thingml"
+
+thing JSPrinter includes CustomPrinter {
+
+	statechart behavior init idle {
+	
+		state idle {
+			internal event p : Print?customPrint
+			action do 
+				'console.log(' & p.msg  & '+", "+' & p.chatMsg & '+", "+' & p.clientno & '+", "+' & p.msgno & '+"\n");' 
+			end
+		}
+	
+	}
+
+}
+
+configuration ChatServer {
+	instance client1 : ChatClient
+	set client1.clientno = 1
+	instance client2 : ChatClient
+	set client2.clientno = 2
+	instance server : ChatServer
+	instance printer : JSPrinter
+	
+	connector client1.chatRoom => server.chatRoom
+	connector client2.chatRoom => server.chatRoom
+	connector client1.Print => printer.Print
+	connector client2.Print => printer.Print
+	connector server.Print => printer.Print
+}

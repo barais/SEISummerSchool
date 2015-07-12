@@ -1,0 +1,141 @@
+import "Timer.thingml"
+import "CustomPrinter.thingml"
+
+
+thing fragment PrintIncForwardMsgs {
+	// Number token
+	message pif_token(token : Integer);
+}
+
+/**
+Second, organize your messages into a port. The timer can receive a timer_start and a timer_cancel,
+and will eventually send a timer_timeout
+*/
+thing fragment PIFIncDecPorts includes PrintIncForwardMsgs
+{
+	required port from_starter
+    {
+		receives pif_token
+	}
+	provided port to_ender
+    {
+		sends pif_token
+	}
+	provided port to_starter
+    {
+		sends pif_token
+	}
+	required port from_ender
+    {
+		receives  pif_token
+	}
+}
+
+thing fragment PIFStarterPorts includes PrintIncForwardMsgs
+{
+	provided port to_ender
+    {
+		sends pif_token
+	}
+	required port from_ender
+    {
+		receives  pif_token
+	}
+}
+
+thing fragment PIFEnderPorts includes PrintIncForwardMsgs
+{
+	provided port to_starter
+    {
+		sends pif_token
+	}
+	required port from_starter
+    {
+		receives  pif_token
+	}
+}
+
+
+thing PIFStarter includes TimerClient,  PIFStarterPorts, CustomPrinterClientPort {
+
+	readonly property period : Integer = 1000
+	
+	statechart behavior init Init {
+	
+		state Init {
+			on entry do
+                timer!timer_start(period)
+			end
+			
+			transition -> Wait //this will loop on the Init state, and start a new timer
+			event timer?timer_timeout
+			action do
+				Print!customPrintS("Sender sends token ... \n")
+				to_ender!pif_token(1)
+			end
+		
+		}
+		
+		state Wait {
+            transition -> Init
+			event m : from_ender?pif_token
+			action do
+				Print!customPrintS(" Sender got token back \n")
+			end
+		}
+	
+	}
+
+}
+
+thing PIFIncDec includes PIFIncDecPorts, CustomPrinterClientPort {
+
+	statechart behavior init Init {
+		property tmp : Integer
+	
+		state Init {
+			
+			transition -> Init
+			event m : from_starter?pif_token
+			action do
+				tmp = m.token
+				Print!customPrintI(tmp)
+				tmp = tmp + 1				
+				to_ender!pif_token(tmp)
+			end
+
+			transition -> Init
+			event m : from_ender?pif_token
+			action do
+				tmp = m.token
+				Print!customPrintI(tmp)
+				tmp = tmp - 1
+				to_starter!pif_token(tmp)
+			end
+		}
+	
+	}
+
+}
+
+thing PIFEnder includes PIFEnderPorts, CustomPrinterClientPort {
+
+	statechart behavior init Init {
+		property tmp : Integer
+	
+		state Init {
+			
+			transition -> Init
+			event m : from_starter?pif_token
+			action do
+				tmp = m.token
+				Print!customPrintS(" ... Ender returns token ... ")
+				tmp = tmp - 1
+				to_starter!pif_token(tmp)
+			end
+		
+		}
+	
+	}
+
+}

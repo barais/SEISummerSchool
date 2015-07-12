@@ -1,0 +1,7 @@
+add sync: WSGroup
+add node0 : JavascriptNode/5.0.6
+add node0.comp831 : NodeRED/2.1.0
+set node0.comp831.nodesDir = '/home/k3/tmp'
+set node0.comp831.userDir = '/home/k3/tmp1'
+attach node0 sync
+
