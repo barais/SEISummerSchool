@@ -15,8 +15,8 @@ As explained in the three classes devoted to MDE, the development of such a dedi
 3.	A simulator to test the program
 4.	A compiler that transforms (compiles) a program of your language into C code that runs on top of the robot (we cannot bypass C everywhere since the robot needs C programs to run).
 
-Creating a metamodel with Eclipse and EMF
------------------------------------------
+1.Creating a metamodel with Eclipse and EMF
+-------------------------------------------
 
 **Example of a program using our dedicated Logo language**
 
@@ -35,15 +35,15 @@ END TO
 carre 50
 ```
 
-Designing the metamodel
------------------------
+###Designing the metamodel
+--------------------------
 
 From the concepts used in the previous program, define a metamodel that can represent this program.
 
 To do so, create a Java project, then create an Ecore model (new → other → ecore diagram) un a folder metamodels to create. Validate your metamodel at the end of this step to check errors (« Sample Ecore Editor » -> « Validate »). A recurrent error concerns the root package of the metamodel: « Ns Prefix » must have a value (e.g. the name of the package) and « Ns URI » must be a URI (e.g. http://logo). Thus URI identifies the metamodel and its models. Remark : there is to parts to model. The concepts specific to controlling robots (pendown, etc.) and the control flow (if, while, boolean expression, etc.). Separate them in two packages (robot and controlFlow).
 
-Generating EMF tools to create models (i.e. programs)
------------------------------------------------------
+###Generating EMF tools to create models (i.e. programs)
+--------------------------------------------------------
 
 1.	Generate the Java code from the metamodel, and the reflexive editor. To do so, you have to create a genmodel file, open it, and right-clic on its root.
 
@@ -51,11 +51,12 @@ Generating EMF tools to create models (i.e. programs)
 
 3.	Fill the model to represent the previous program.
 
-##Creating a textual editor with Xtext Create a new XText project (« from existing Ecore model ») . You can then defined the grammar of your language to match the one of previous program. Use the hard-copy to design this grammar. Here is a skeleton of the grammar to fill:
+##2.Creating a textual editor with Xtext
 
-grammar org.inria.diverse.logo.dsl.LogoDSL with org.eclipse.xtext.common.Terminals
+Create a new XText project (« from existing Ecore model ») . You can then defined the grammar of your language to match the one of previous program. Use the hard-copy to design this grammar. Here is a skeleton of the grammar to fill:
 
 ```xtext
+grammar org.inria.diverse.logo.dsl.LogoDSL with org.eclipse.xtext.common.Terminals
 generate logoDSL "http://www.inria.fr/diverse/logo/DSL"
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
@@ -191,14 +192,13 @@ terminal DOUBLE returns ecore::EDouble: ('0'..'9')+ ('.' ('0'..'9')+)?;
 
 Copy-paste the previous program in your editor to test it.
 
-Create your own simulator
--------------------------
+##3.Create your own simulator
 
 I prepare a first version of the simulator with some piece of code to complete. Import these projects.
 
 In particular, you must complete the left statement and the PROC_CALL Statement
 
-##. Extends your language to support the change of the font size.
+##4. Extends your language to support the change of the font size.
 
 At the end you should be able to simulate this program
 
