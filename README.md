@@ -1,11 +1,10 @@
-HEADS IDE Training and Tutorials
+SEI Sumer School on Model Driven Engineering Training and Tutorials
 ================================
 
 ![HEADS](http://heads-project.eu/sites/default/files/heads_large.png)
 
 This repository contains a set of tutorials to get started with the technologies developed in the [HEADS research project](http://heads-project.eu/).
 
-These tutorials are currently used internally in the HEADS project in order to evaluate the initial release of the HEADS IDE. However, these tutorial can be followed by external developers with no prior knoledge of the HEADS technologies. Do not hesitate to contact us if you have any enquiry or would like more information.
 
 ## Installation of the HEADS IDE
 
@@ -19,29 +18,32 @@ More information about Eclipse can be found [here](http://help.eclipse.org/luna/
 
 ## List of tutorials
 
-We currently have a list of 5 tutorials (under development). We will update there descriptions when they are available. These tutorials typically assume that you follow them sequentially but ThingML and Kevoree tutorials might be followed independently.
+For the scool, we propose a list of 4 tutorials. We will update there descriptions when they are available. These tutorials typically assume that you follow them sequentially but ThingML and Kevoree tutorials might be followed independently.
 
-### 1. HEADS ThingML modelling language basics
+### 1. Build your own DSL using MDE - the lego sample ###
 
-Learn the basics of ThingML. How to write you first program in a platform independent way and compile it to different platforms ranging from an Arduino microcontroller to a plain Java program. Also learn how to write platform specific components and link to exiting APIs or libraries.
+Traditional Programming Language Engineering starts with the grammar of a language to produce a variety of tools for processing programs expressed in this language. Recently however, many new languages tend to be first defined through metamodels, i.e. models describing their abstract syntax. Relying on well tooled standards such as E-MOF, this approach makes it possible to readily benefit from a set
+of tools such as reflexive editors, or XML serialization of models. This tutorial aims at showing how Model Driven Engineering can easily complement these off-the-shelf tools to obtain a complete environment for such a language, including interpreter, compiler, pretty-printer and editor. We illustrate the conceptual simplicity and elegance of this approach using the running example of the well known LOGO
+programming language, developed within the Kermeta environment.
 
-**[Go to this tutorial](https://github.com/HEADS-project/training/tree/master/1.ThingML_Basics) ** (Beta version released on 01/12/2014, your feedback is welcome).
 
 ### 2. HEADS Kevoree runtime management basics
 
+Learn the basics of Kevoree.
+How to write you first component.
+
 [Go to the tutorial](https://github.com/HEADS-project/training/tree/master/2.Kevoree_Basics)
+
+
+### 3. HEADS ThingML modelling language basics
+
+Learn the basics of ThingML. How to write you first program in a platform independent way and compile it to different platforms ranging from an Arduino microcontroller to a plain Java program. Also learn how to write platform specific components and link to exiting APIs or libraries.
+
+**[Go to this tutorial](https://github.com/HEADS-project/training/tree/master/1.ThingML_Basics) **
+
 
 ### 3. HEADS From design time to runtime (ThingML + Kevoree)
 
-To be released around 01/01/2015.
-
-### 4. HEADS ThingML modelling language "advanced"
-
-To be released around 30/01/2015.
-
-### 5. HEADS Kevoree runtime management "advanced"
-
-To be released around 15/02/2015.
 
 ## Quick Links
 
