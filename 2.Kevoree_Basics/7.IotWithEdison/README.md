@@ -56,7 +56,7 @@ This will display the current value of the sensor !
 
 This project provides a simple example of  Kevoree Component written in typescript. This component use  MRAA to get value from Edison.
 
-[Source code for the component](https://github.com/barais/EJCP15/blob/master/7.IotWithEdison/examples/src/headstempcomp/lib/HeadsTempEdisonComp.ts)
+[Source code for the component](https://github.com/barais/SEISummerSchool/blob/master/7.IotWithEdison/examples/src/headstempcomp/lib/HeadsTempEdisonComp.ts)
 
 To build your project
 
