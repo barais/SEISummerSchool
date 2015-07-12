@@ -2,6 +2,10 @@
 
 ##TP – Creating a domain-specific language (DSL) with EMF and Kermeta
 
+### Note
+This work comes from a tutorial@ICSE 08 on Kermeta. I update the textual syntax part from a recent [blog post](http://blog.uqbar-project.org/2015/06/tutorial-language-development-with.html)
+
+
 ### Goal
 
 The goal of these three practical sessions is to create a language for programming the behaviour of a Drawing Lego robot based on the Logo Language. This robot can move forward, rotate, penup and pendown a pen, and display some texts on its screen. ![Schema describing the use of a DSL for programming a Lego robot](https://raw.githubusercontent.com/barais/SEISummerSchool/master/1.Logo/image/tpidm.png)
