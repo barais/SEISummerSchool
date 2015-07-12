@@ -37,11 +37,11 @@ Learn the basics of Kevoree. How to write you first component.
 
 Learn the basics of ThingML. How to write you first program in a platform independent way and compile it to different platforms ranging from an Arduino microcontroller to a plain Java program. Also learn how to write platform specific components and link to exiting APIs or libraries.
 
-\*\*[Go to this tutorial](https://github.com/barais/SEISummerSchool/tree/master/3.ThingML_Basics) \*\*
+[Go to this tutorial](https://github.com/barais/SEISummerSchool/tree/master/3.ThingML_Basics)
 
 ### 4. HEADS From design time to runtime (ThingML + Kevoree)
 
-\*\*[Go to this tutorial](https://github.com/barais/SEISummerSchool/tree/master/4.Wrapping_ThingML_into_Kevoree) \*\*
+[Go to this tutorial](https://github.com/barais/SEISummerSchool/tree/master/4.Wrapping_ThingML_into_Kevoree)
 
 Quick Links
 -----------
