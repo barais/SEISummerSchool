@@ -27,31 +27,36 @@ of tools such as reflexive editors, or XML serialization of models. This tutoria
 programming language, developed within the Kermeta environment.
 
 
+[Go to the tutorial](https://github.com/barais/SEISummerSchool/tree/master/1.Logo)
+
 ### 2. HEADS Kevoree runtime management basics
 
 Learn the basics of Kevoree.
 How to write you first component.
 
-[Go to the tutorial](https://github.com/HEADS-project/training/tree/master/2.Kevoree_Basics)
+[Go to the tutorial](https://github.com/barais/SEISummerSchool/tree/master/2.Kevoree_Basics)
 
 
 ### 3. HEADS ThingML modelling language basics
 
 Learn the basics of ThingML. How to write you first program in a platform independent way and compile it to different platforms ranging from an Arduino microcontroller to a plain Java program. Also learn how to write platform specific components and link to exiting APIs or libraries.
 
-**[Go to this tutorial](https://github.com/HEADS-project/training/tree/master/1.ThingML_Basics) **
+**[Go to this tutorial](https://github.com/barais/SEISummerSchool/tree/master/3.ThingML_Basics) **
 
 
 ### 3. HEADS From design time to runtime (ThingML + Kevoree)
 
+**[Go to this tutorial](https://github.com/barais/SEISummerSchool/tree/master/4.Wrapping_ThingML_into_Kevoree) **
 
 ## Quick Links
 
-Installing the HEADS IDE: https://heads-project.github.io/methodology/heads_ide/installation_guide.html
+Installing the HEADS IDE:
+
+https://heads-project.github.io/methodology/heads_ide/installation_guide.html
 
 ## Reporting issues, getting support, etc
 
-If you encounter any problem, find a bug or have suggestions for additional features, please use the HEADS IDE bug tracker at https://github.com/HEADS-project/heads_ide/issues. This is the best and prefered way of getting in touch with us.
+If you encounter any problem, find a bug or have suggestions for additional features, please use the HEADS IDE bug tracker at  https://github.com/HEADS-project/heads_ide/issues. This is the best and prefered way of getting in touch with us.
 
 ## Contact us
 
