@@ -4,9 +4,7 @@
 
 ### Goal
 
-The goal of these three practical sessions is to create a language for programming the behaviour of a Drawing Lego robot based on the Logo Language. This robot can move forward, rotate, penup and pendown a pen, and display some texts on its screen.
-
-!(image/tpidm.png) Schema describing the use of a DSL for programming a Lego robot
+The goal of these three practical sessions is to create a language for programming the behaviour of a Drawing Lego robot based on the Logo Language. This robot can move forward, rotate, penup and pendown a pen, and display some texts on its screen. ![Schema describing the use of a DSL for programming a Lego robot](https://raw.githubusercontent.com/barais/SEISummerSchool/master/1.Logo/image/tpidm.png)
 
 The development toolkit provided with the robot relies on C language. The main drawback is that C is a general-purpose language (GPL) and is, therefore, not dedicated to the development of Lego robots. Using C to develop robots will polluted the developed code with C-specific routines and hacks. The use of a language dedicated to robots will alleviate their development.
 
