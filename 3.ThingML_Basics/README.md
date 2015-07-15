@@ -25,7 +25,7 @@ Learn the basics of ThingML. How to write you first program in a platform indepe
 
 To follow this tutorial, you need to have the ThingML editor and compilers. They are released as plugins for the Eclipse IDE. There are two different options for installing the ThingML tools 
 
-:warn: In the lab, I provide this eclipse headside in the Virtual Machine. You can start it in running the following command 
+:warn In the lab, I provide this eclipse headside in the Virtual Machine. You can start it in running the following command 
 	
 	/opt/headside/eclipse
 
