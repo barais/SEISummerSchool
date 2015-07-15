@@ -140,6 +140,7 @@ To run the generated code, go to the generated directory
 	
 
  and run:
+
 	npm install 
 	node main.js
 
@@ -186,7 +187,7 @@ In this last step of the tutorial, your task is to write your own program in Thi
 * Should be compilable and executable on at least 2 platforms
 * Should use some platform specific features
 
-Submit your program by forking the [training repository](https://github.com/SEISummer15/training), adding to example in a sub-folder in the Contribs directory and making pull request. If you have no idea how to do this, send your example to me (barais@irisa.fr). The best examples will be added as additional examples in this tutorial. Think about what examples you would have liked to get!
+Submit your program by forking the [training repository](https://github.com/barais/SEISummerSchool/tree/master/3.ThingML_Basics), adding to example in a sub-folder in the Contribs directory and making pull request. If you have no idea how to do this, send your example to me (barais@irisa.fr). The best examples will be added as additional examples in this tutorial. Think about what examples you would have liked to get!
 
 ## Reporting issues, getting support, etc
 
