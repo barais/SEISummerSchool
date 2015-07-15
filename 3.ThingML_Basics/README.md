@@ -27,7 +27,7 @@ To follow this tutorial, you need to have the ThingML editor and compilers. They
 
 :warning: In the lab, I provide this eclipse headside in the Virtual Machine. You can start it in running the following command and skipping this install part. 
 	
-	/opt/headside/eclipse
+	/opt/headide/eclipse
 
 * [Download the latest HEADS IDE Eclipse bundle](http://coreff5.istic.univ-rennes1.fr/jenkins/job/headside/ws/products.minimal/target/products/). This bundle contains all the HEADS plugins already installed.
 
@@ -99,7 +99,7 @@ The Java code generator produces a standard Maven project. To compile and execut
 
 To compile and execute, go to the generated directory 
 
-	cd /opt/headside/workspace/NAMEOFPROJECT/thingml-gen/java
+	cd /opt/headide/workspace/NAMEOFPROJECT/thingml-gen/java
 
 and run:
 
@@ -119,7 +119,7 @@ The Posix C/C++ code generator produces a standard Linux project which includes 
 
 To compile and execute, go to the generated directory 
 
-	cd /opt/headside/workspace/NAMEOFPROJECT/thingml-gen/posix/HelloCfg
+	cd /opt/headide/workspace/NAMEOFPROJECT/thingml-gen/posix/HelloCfg
 	
 and run:
 
@@ -136,7 +136,7 @@ The Javascript compiler produces code which is meant to run with NodeJS. In orde
 
 To run the generated code, go to the generated directory
 
-	cd /opt/headside/workspace/NAMEOFPROJECT/thingml-gen/javascript/HelloCfg
+	cd /opt/headide/workspace/NAMEOFPROJECT/thingml-gen/javascript/HelloCfg
 	
 
  and run:
