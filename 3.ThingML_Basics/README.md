@@ -23,7 +23,7 @@ Learn the basics of ThingML. How to write you first program in a platform indepe
 
 ### 0. Installing the HEADS tools for ThingML
 
-To follow this tutorial, you need to have the ThingML editor and compilers. They are released as plugins for the Eclipse IDE. There are two different options for installing the ThingML tools: 
+To follow this tutorial, you need to have the ThingML editor and compilers. They are released as plugins for the Eclipse IDE. There are two different options for installing the ThingML tools (In the lab, I provide this eclipse (heads idein the Virtual Machine): 
 
 * [Download the latest HEADS IDE Eclipse bundle](http://coreff5.istic.univ-rennes1.fr/jenkins/job/headside/ws/products.minimal/target/products/). This bundle contains all the HEADS plugins already installed.
 
@@ -35,7 +35,10 @@ To check if the ThingML editor is properly installed, open a sample ".thingml" f
 
 ### 1. Hello World!
 
-The first step of this tutorial is a simple Hello World example in ThingML. This examples shows the smallest possible ThingML program. It is composed of a "Thing" which defines a component type: 
+The first step of this tutorial is a simple Hello World example in ThingML. So create a ThingML project in eclipse. File -> new -> Other -> EMFText project -> EMFText thingML project. Put a name for yoir project. I will automatically create a thingml file in this project. You can rename this file (Right clic on the file - refactor -> rename file). You can name it helloworld.thingml. 
+
+
+This example shows the smallest possible ThingML program. It is composed of a "Thing" which defines a component type: 
 
 	thing HelloThing {
 		statechart HelloWorld init Greetings {
@@ -58,6 +61,25 @@ To compile and run a ThingML program, the components (or Things) need to be inst
 		instance my_instance: HelloThing
 	}
 
+As a result you will get the following program.
+
+	thing HelloThing {
+		statechart HelloWorld init Greetings {
+			state Greetings {
+				transition -> Bye action print "Hello World!\n"
+			}
+			state Bye {
+				on entry print "Bye.\n"
+			}
+		}
+	}
+	configuration HelloCfg 
+	@arduino_stdout "Serial"
+	{
+		instance my_instance: HelloThing
+	}
+
+
 This configuration can now be compiled for different platforms and executed. The different compilers can be called from the "HEADS / ThingML" context menu. Do do so:
 
 * Right-Click on the ThingML file to compile (it should be the file which contains the Configuration to be compiled)
@@ -67,11 +89,17 @@ This configuration can now be compiled for different platforms and executed. The
 
 #### Generating to Java, Building and running with Maven
 
+Select the target "Plain Java" platform in the "HEADS / ThingML" context menu
+
 The Java code generator produces a standard Maven project. To compile and execute the generated code all you you need to have a JDK and [Maven](http://maven.apache.org/) installed. 
 
-To compile and execute, go to the generated directory and run:
+To compile and execute, go to the generated directory 
 
-	mvn clean package exec:java -Dexec.mainClass=org.thingml.generated.Main
+	cd /opt/headside/workspace/NAMEOFPROJECT/thingml-gen/java
+
+and run:
+
+	mvn clean package exec:java -Dexec.mainClass=eu.heads.Main
 
 You may also open the generated project in your favorite IDE. Netbeans and IntelliJ work great with Maven projects. Eclipse typically requires some additional plugins but can also work. 
 
@@ -80,9 +108,16 @@ Hit Ctrl+C to stop the execution of the ThingML program.
 
 #### Compiling to C/C++, Building and running with GCC and Make
 
-The Posix C/C++ code generator produces a standard Linux project which includes a Makefile. You need to have GCC and Make installed in order to build the generated code. If you are running linux you probably already have these installed or can install them very easily. If you are running windows you can follow [these instructions](http://cs.calvin.edu/curriculum/cs/112/resources/installingEclipse/cygwin/) in order to get up and running.
+Select the target "C++ for linux / Posix" platform in the "HEADS / ThingML" context menu
 
-To compile and execute, go to the generated directory and run:
+
+The Posix C/C++ code generator produces a standard Linux project which includes a Makefile. You need to have GCC and Make installed in order to build the generated code (It is the case within the virtual machine). If you are running linux you probably already have these installed or can install them very easily. If you are running windows you can follow [these instructions](http://cs.calvin.edu/curriculum/cs/112/resources/installingEclipse/cygwin/) in order to get up and running.
+
+To compile and execute, go to the generated directory 
+
+	cd /opt/headside/workspace/NAMEOFPROJECT/thingml-gen/posix/HelloCfg
+	
+and run:
 
 	make
 	./HelloCfg
@@ -90,9 +125,29 @@ To compile and execute, go to the generated directory and run:
 
 Hit Ctrl+C to stop the execution of the ThingML program.
 
+
+#### Compiling to Javascript, Building and running with NodeJS
+
+The Javascript compiler produces code which is meant to run with NodeJS. In order to run the generated code you need to install NodeJS. On Ubuntu Linux NodeJS can be installed by running `apt-get install nodejs`. On Windows it can be downloaded from [the NodeJS web page](http://nodejs.org/) and will seamlessly.
+
+To run the generated code, go to the generated directory
+
+	cd /opt/headside/workspace/NAMEOFPROJECT/thingml-gen/javascript/HelloCfg
+	
+
+ and run:
+	npm install 
+	node main.js
+
+That is it!
+
+
 #### Compiling to Arduino, Building and running with the Arduino IDE
 
 The Arduino code generator produces a single .ino file which contains the complete source code for the ThingML configuration. This file can be directly opened with the Arduino IDE.
+
+Download the arduino IDE. [https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software)
+For the Virtual machine, you can select Linux 64 bits. (If it is to long, you can skip this part and works only on the virtual machine with posix C code.
 
 Use the arduino IDE to compile and upload the code to your arduino board.
 
@@ -100,15 +155,6 @@ The Hello World example writes to the Arduino serial interface. You should open 
 
 Note: The "print" statement in ThingML normally prints messages to the standard output for the program. In the case of an Arduino board, there are no standard output so by default the code generator will not generate any code for the print statement. The annotation `@arduino_stdout "Serial"` on the Configuration tells the Arduino compiler to use the Serial device as the output for prints and errors.
 
-#### Compiling to Javascript, Building and running with NodeJS
-
-The Javascript compiler produces code which is meant to run with NodeJS. In order to run the generated code you need to install NodeJS. On Ubuntu Linux NodeJS can be installed by running `apt-get install nodejs`. On Windows it can be downloaded from [the NodeJS web page](http://nodejs.org/) and will seamlessly.
-
-To run the generated code, go to the generated directory and run:
-
-	node behavior.js
-
-That is it!
 
 ### 2. Asynchronous messaging with the Ping Pong Example
 
@@ -136,7 +182,7 @@ In this last step of the tutorial, your task is to write your own program in Thi
 * Should be compilable and executable on at least 2 platforms
 * Should use some platform specific features
 
-Submit your program by forking the [training repository](https://github.com/HEADS-project/training), adding to example in a sub-folder in the Contribs directory and making pull request. If you have no idea how to do this, send your example to Brice Morin (brice.morin@sintef.no). The best examples will be added as additional examples in this tutorial. Think about what examples you would have liked to get!
+Submit your program by forking the [training repository](https://github.com/SEISummer15/training), adding to example in a sub-folder in the Contribs directory and making pull request. If you have no idea how to do this, send your example to me (barais@irisa.fr). The best examples will be added as additional examples in this tutorial. Think about what examples you would have liked to get!
 
 ## Reporting issues, getting support, etc
 
