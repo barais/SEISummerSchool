@@ -15,7 +15,7 @@ The distributed system you are about to build and run is composed of:
       - **ConsolePrinter**: to display the received message from Ticker to the console
       - **WSMsgBroker**: to start the server that WSChan will connect to  
         This component starts a server that acts as a message broker
-  - **WSChan**: to relay the messages between the 2 components  
+  - **RemoteWSChan**: to relay the messages between the 2 components  
     This channel creates a client that connects to the specified server (in its dictionary attributes)
 
 #### The big picture
@@ -106,14 +106,12 @@ add javaNode.ticker : Ticker
 // add the ConsolePrinter and the WSMsgBroker on the JS platform
 add jsNode.printer : ConsolePrinter
 
-// add a WSChan to transmit the messages between the Ticker and the ConsolePrinter
+// add a RemoteWSChan to transmit the messages between the Ticker and the ConsolePrinter
 add chan : RemoteWSChan
 
 // give the host:port of the broker to the chan
 set chan.host = "ws.kevoree.org"
-set chan.port = "80"
-set chan.path = "/"
-set chan.uuid = 'kokoko'
+set chan.uuid = '1234'
 
 // bind the ticker to the chan
 bind javaNode.ticker.tick chan
