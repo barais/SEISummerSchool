@@ -70,7 +70,7 @@ public class HelloWorld {
             @Override
             public void run() {
                 // sends the greetMessage through "hello" output port
-                hello.send(greetMessage);
+                hello.send(greetMessage, null);
             }
         }, 0, 5, TimeUnit.SECONDS);
     }
